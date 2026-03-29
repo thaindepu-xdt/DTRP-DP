@@ -1,0 +1,8 @@
+Learning Rate: 0.0003
+
+grid_h: 5
+grid_w: 5
+temporal_features_size: 12
+temporal_hidden: 64
+forecast_steps: 4
+dropout: 0.2

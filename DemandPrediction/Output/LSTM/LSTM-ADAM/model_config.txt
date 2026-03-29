@@ -1,0 +1,10 @@
+Optimizer: ADAM
+Learning Rate: 0.0003
+
+n_zones: 20
+temporal_features_size: 12
+demand_hidden: 64
+temporal_hidden: 32
+num_layers: 1
+dropout: 0.3
+forecast_steps: 4

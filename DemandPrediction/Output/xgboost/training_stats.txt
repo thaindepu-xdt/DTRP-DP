@@ -1,0 +1,5 @@
+Model: XGBoost (standalone aligned)
+Depth: 5
+Max trees: 300
+Early stopping rounds: 20
+Training time (seconds): 251.10

@@ -1,0 +1,1 @@
+{"n_clusters":20.0,"n_init":20.0,"inertia":11.1214211438,"cluster_size_min":603.0,"cluster_size_max":22031.0,"cluster_size_mean":11182.6,"cluster_size_std":7217.9929024626,"total_requests":223652.0,"silhouette":0.4006592303,"davies_bouldin":0.7285393148,"min_intercluster_distance_m":1386.1583603758,"mean_intercluster_distance_m":8445.6148787078,"runtime_sec":14.5423226357}
