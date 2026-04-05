@@ -28,30 +28,54 @@ This directory implements dispatching algorithms based on results from the predi
 
 ---
 
-## How to Run the Code
+## Installation and Execution
 
-### 1. System Requirements
-- **Language**: Python 3.x
-- **Tools**: Jupyter Notebook or Google Colab (The project supports running on Colab with Drive mounting features).
-- **Key Libraries**: 
-  - Data Processing: `pandas`, `numpy`, `scipy`
-  - Visualization: `matplotlib`, `seaborn`
-  - Machine Learning: `xgboost`, `scikit-learn` (optional for baselines)
+Follow these steps to set up the environment and run the project locally after cloning.
 
-### 2. Clone the Project
+### 1. Prerequisites
+- **Python**: 3.8 or higher
+- **Git**: Installed on your system
+
+### 2. Set Up Environment
+It is recommended to use a virtual environment to manage dependencies:
+
 ```bash
-git clone https://github.com/thaindepu-xdt/DTRP-DP.git
-cd DTRP-DP
+# Create a virtual environment
+python -m venv venv
+
+# Activate the environment
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-### 3. Data Structure
-Ensure you have loaded the taxi trip data into the `DemandPrediction/Input/` directory. Required files:
-- `train.csv`
-- `test.csv`
+### 3. Data Structure (Manual Setup)
+Since raw data and intermediate results are not included in the repository, you must manually place them in the correct directories:
 
-### 4. Execution
-1. **Demand Prediction**: Open and run the notebook in `DemandPrediction/source_code/` to perform data cleaning and generate prediction files.
-2. **Routing Optimization**: Use the prediction result files to run the notebooks in `Routing/source_code/`.
+#### **Demand Prediction Inputs**
+Place NYC taxi trip data in `DemandPrediction/Input/`:
+- `train.csv` (Raw training data)
+- `test.csv` (Raw test data)
+
+#### **Routing Optimization Inputs**
+Place generated results and model files in `Routing/Input/`:
+- `last_month_daily/last_month_daily_eff_3/requests_{date}.csv`
+- `clusters/n20_init20/centroids_k20_n20.csv`
+- `BASELINES/xgboost/xgboost_next15min_predictions.csv`
+
+### 4. Running the Notebooks
+You can run the notebooks using Jupyter Lab/Notebook or inside VS Code.
+
+1.  **Phase 1: Demand Prediction**
+    *   Open `DemandPrediction/source_code/PHASE_1_Static&Dynamic_routing_V1.ipynb`.
+    *   Run all cells to perform data cleaning and generate prediction outputs.
+2.  **Phase 2: Routing Optimization**
+    *   Open `Routing/source_code/dynamic_routing_ver1.ipynb` (Basic) or `dynamic_routing_ver2.ipynb` (Optimized).
+    *   These notebooks will read from `Routing/Input` and save results to `Routing/Output`.
 
 ---
 
